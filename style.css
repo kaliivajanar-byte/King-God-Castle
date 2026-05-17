@@ -1,0 +1,350 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fefefe;
+  background-image: url("KingGodCastle-MOD-APK-cover.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.brand img {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #ffd369;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  place-items: center;
+  padding: 60px 24px;
+}
+
+.hero-card {
+  width: min(100%, 960px);
+  background: rgba(6, 9, 21, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 30px;
+  padding: 52px;
+  text-align: center;
+  box-shadow: 0 32px 120px rgba(0, 0, 0, 0.45);
+}
+
+.badge {
+  display: inline-block;
+  padding: 10px 18px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(3rem, 5vw, 5.6rem);
+  line-height: 0.95;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero p {
+  margin: 28px auto 0;
+  max-width: 680px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.browser-note {
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  opacity: 0.88;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  padding: 16px 36px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ffd369 0%, #f78f01 100%);
+  color: #111;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: 80px 24px;
+}
+
+.section-content {
+  max-width: 840px;
+  margin: 0 auto;
+  background: rgba(6, 9, 21, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 44px;
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.section-content p {
+  margin: 24px auto 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.features {
+  padding-top: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 26px;
+  min-height: 210px;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.75;
+}
+
+.section-download {
+  padding-bottom: 40px;
+}
+
+.download-block {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 40px 32px;
+}
+
+.download-block h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+}
+
+.download-block p {
+  margin: 18px auto 28px;
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.btn-large {
+  min-width: 240px;
+}
+
+.feedback {
+  margin-top: 18px;
+  color: #ffd369;
+  font-size: 0.95rem;
+}
+
+.footer {
+  padding: 20px 24px 34px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+@media (max-width: 980px) {
+  .topbar {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 16px 18px;
+  }
+
+  .menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 48px 18px;
+  }
+
+  .hero-card {
+    width: 100%;
+    padding: 36px 24px;
+  }
+
+  .hero p,
+  .section-content p,
+  .download-block p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 780px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .topbar {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .menu {
+    gap: 10px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .hero-card {
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+
+  .section {
+    padding: 60px 18px;
+  }
+
+  .section-content {
+    padding: 30px 22px;
+  }
+
+  .cards {
+    gap: 18px;
+  }
+
+  .card {
+    padding: 22px;
+    min-height: auto;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 18px;
+  }
+
+  .download-block {
+    padding: 32px 22px;
+  }
+
+  .footer {
+    padding: 18px 18px 32px;
+  }
+}
+
